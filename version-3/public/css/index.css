@@ -1,0 +1,139 @@
+@import url('global.css');
+
+html {
+    background: url('/images/indexBackground.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;}
+
+#homePage {
+    background-color: var(--title-subTitle-bg-color);
+    opacity: 0.90;
+    width: 90vw;
+    height: 28vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#name {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-top: 30px;
+    color: var(--title-subTitle-font-color);
+    opacity: 0;
+    animation-name: name;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 0.25s;
+    animation-duration: 1s;
+}
+
+@keyframes name {
+    100% {
+        opacity: 1;
+    }
+}
+
+#subtitle {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--title-subTitle-font-color);
+    margin-top: 2em;
+    opacity: 0;
+    animation-name: subtitle;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-delay: 0.50s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes subtitle {
+    100% {
+        opacity: 1;
+    }
+}
+
+#socialMedia {
+    width: 100%;
+    margin: 1rem 0 0 0;
+    opacity: 0;
+    animation-name: socialMedia;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.75s;
+}
+
+@keyframes socialMedia {
+    100% {
+        opacity: 1;
+    }
+}
+
+#socialMedia ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#socialMedia ul li {
+    list-style-type: none;
+    margin: 0;
+}
+
+#socialMedia ul li a img {
+    width: 45%;
+}
+
+@media (min-width: 481px) {
+    #name {
+        font-size: 3em;
+    }
+
+    #subtitle {
+        font-size: 1.25em;
+    }
+
+    #socialMedia ul li a img {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1025px) {
+    #name {
+        font-size: 4em;
+    }
+
+    #subtitle {
+        font-size: 1.5em;
+    }
+
+    #socialMedia ul li a img {
+        width: 55%;
+    }
+}
+
+@media (min-width: 1201px) {
+    #name {
+        font-size: 5em;
+    }
+
+    #subtitle {
+        font-size: 2em;
+    }
+
+    #socialMedia ul li a img {
+        width: 60%;
+    }
+}

@@ -1,0 +1,128 @@
+@import url('global.css');
+
+#topMenuNav {
+    display: none;
+}
+
+#itExperienceContent {
+    margin: 1rem 1rem 5rem 1rem;
+}
+
+#itExperienceContent h1 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#itExperienceContent h2 {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+#itExperienceContent h3 {
+    font-size: 0.75rem;
+}
+
+#itExperienceContent ul {
+    font-size: 0.75rem;
+    margin-left: 0;
+}
+
+.experienceTitle {
+    opacity: 0;
+    animation-name: itExperienceTitle;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.25s;
+}
+
+@keyframes itExperienceTitle {
+    100% {
+        opacity: 1;
+    }
+}
+
+.onGoing {
+    opacity: 0;
+    animation-name: onGoing;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.50s;
+}
+
+@keyframes onGoing {
+    100% {
+        opacity: 1;
+    }
+}
+
+.job {
+    opacity: 0;
+    animation-name: job;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.75s;
+}
+
+@keyframes job {
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    #topMenuNav {
+        display: flex;
+    }
+
+    #bottomMenuNav {
+        display: none;
+    }
+
+    #itExperienceContent {
+        display: grid;
+        justify-content: space-evenly;
+        grid-column: 1fr 4fr;
+        column-gap: 5rem;
+        margin: 5rem 1rem 0 1rem;
+    }
+
+    #itExperienceContent h1 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    
+    #itExperienceContent h2 {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    
+    #itExperienceContent h3 {
+        font-size: 1rem;
+    }
+    
+    #itExperienceContent ul {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+
+    .experienceTitle {
+        grid-column: 1/ 2;
+        grid-row: 1 / 2;
+    }
+
+    .itDateExperience {
+        font-style: italic;
+    }
+
+    .onGoing {
+        grid-row: 1 / 2;
+        grid-column: 2 / 5;
+    }
+
+    .job {
+        grid-column: 2 / 5;
+    }
+}
